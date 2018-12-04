@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Filson';
+    src: url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.eot');
+    src: url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.eot?#iefix') format('embedded-opentype'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.woff2') format('woff2'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.woff') format('woff'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.ttf') format('truetype'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/regular/331445_1_0.svg#Filson') format('svg');
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Filson';
+    src: url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.eot');
+    src: url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.eot?#iefix') format('embedded-opentype'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.woff2') format('woff2'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.woff') format('woff'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.ttf') format('truetype'),url('../../frontend/Vaimo/veke/fi_FI/fonts/veke/Filson/bold/331445_0_0.svg#Filson') format('svg');
+    font-weight: 700;
+    font-style: normal
+}
+
+.page-print .logo {
+    display: block;
+    float: none;
+    text-align: left
+}
+
+@media print {
+    * {
+        -webkit-filter: none !important;
+        background: transparent !important;
+        color: #000 !important;
+        filter: none !important;
+        text-shadow: none !important
+    }
+
+    a,a:visited {
+        text-decoration: underline !important
+    }
+
+    pre,blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    .table-wrapper table {
+        width: 100%;
+        table-layout: fixed
+    }
+
+    .table-wrapper table td {
+        width: auto
+    }
+
+    .table-wrapper table>tfoot>tr:first-child {
+        border-top: 1px solid #999
+    }
+
+    .box,tr,img {
+        page-break-inside: avoid
+    }
+
+    img {
+        max-width: 100% !important
+    }
+
+    @page {
+        margin: 1cm
+    }
+
+    .block-content,p,h2,h3 {
+        orphans: 3;
+        widows: 3
+    }
+
+    .block-content {
+        page-break-before: avoid
+    }
+
+    .block-title,h2,h3 {
+        page-break-after: avoid
+    }
+
+    .nav-toggle {
+        display: none !important
+    }
+
+    .sidebar,.nav-sections,.header.content>*[class],.panel.wrapper>*[class],.footer.content>*[class] {
+        display: none
+    }
+
+    .logo,.footer .copyright {
+        display: block !important;
+        margin: 10px 0
+    }
+
+    .order-details-items .order-items .order-gift-message:not(.expanded-content) {
+        height: auto;
+        visibility: visible
+    }
+
+    .column.main {
+        float: none !important;
+        width: 100% !important
+    }
+
+    .breadcrumbs {
+        margin: 0 auto;
+        text-align: right
+    }
+
+    .footer.content {
+        padding: 0
+    }
+}
+
+* {
+    -webkit-filter: none !important;
+    background: transparent !important;
+    color: #000 !important;
+    filter: none !important;
+    text-shadow: none !important
+}
+
+.message.global.demo,.block-search,.sidebar,.nav-sections,.minicart-wrapper,.nav,.nav-toggle,.magestore-bannerslider,.breadcrumbs,.product-info-stock-sku,.product-name,.product-reviews-summary,.reviews-actions,.box-tocart,.product-social-links,.product.attribute.overview,.product-about,.product-details,.item.title,.catalog-product-view .product.media .fotorama__nav.fotorama__nav--thumbs.fotorama__shadows--bottom,.catalog-product-view .fotorama__nav.fotorama__nav--thumbs,.catalog-product-view .fotorama__nav__frame,.nav-container,.block.header-block-marketing,.sveapartpayoptions,.partpaytooltip,.product-add-form,.customer-service.closed._loaded,.price-label,.block.widget.block-viewed-products-grid,.block.related,.vaimo-component-badge__wrapper--top-left,#smilee-request-cobrowsing,.footer.content {
+    display: none !important
+}
+
+.page-header {
+    border-bottom: 0;
+    margin-bottom: 20px
+}
+
+.header.content {
+    padding-top: 0;
+    position: absolute;
+    padding-left: 400px
+}
+
+.logo {
+    position: relative;
+    left: 569px
+}
+
+.page-title-wrapper.product {
+    position: relative;
+    right: 575px;
+    display: inline
+}
+
+.page-title {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+.product-info-main {
+    padding-left: 20px;
+    padding-bottom: 10px
+}
+
+.product.media {
+    height: 250px !important;
+    margin: 0;
+    margin-top: 40px
+}
+
+.fotorama__stage {
+    height: 250px !important
+}
+
+.price-box.price-final_price {
+    position: relative;
+    top: -41px;
+    right: -34px;
+    font-size: 20px
+}
+
+.catalog-product-view .product.media img {
+    width: 250px;
+    max-height: 250px;
+    position: relative;
+    left: 60px
+}
+
+.product.data.items .item.content {
+    padding: 0;
+    border: 0;
+    page-break-inside: avoid
+}
+
+.product.data.items * {
+    float: none !important
+}
+
+.data.item.content {
+    position: relative;
+    left: 1000px;
+    top: 5px
+}
