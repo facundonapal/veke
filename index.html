@@ -19,7 +19,7 @@
 <link  rel="stylesheet" type="text/css"  media="print" href="css/3f23cb031dfaaa1b10a045eb364519fb.min.css" />
 <link  rel="stylesheet" type="text/css"  media="screen" href="css/veke.min.css" />
 
-<link  rel="stylesheet" type="text/css"  media="screen" href="css/photoslurp.css" />
+<link  rel="stylesheet" type="text/css"  media="screen" href="css/photoslurp-index.css" />
 
 <script  type="text/javascript"  src="js/7c108297e5fa1a0e9d4c41f69444b3c6.min.js"></script>
 <link  rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,600,700" />
@@ -3512,7 +3512,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </li>  
     <li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-kampanjat v-navigation__item--nav-7"  >
                 <a href="lookbook.html" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-kampanjat v-navigation__link--nav-7" >
-                #veke                            </a>
+                #vekefi                          </a>
             
     </li>  </ul>
     </div></p></div><div class="block header-block-marketing">
@@ -8081,7 +8081,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!--start of Photoslurp code -->
 
-<div class="tagboard-content"><div class="some-title" id="some-container">#vekefi</div>
+<div class="tagboard-content"><div class="some-title" id="some-container">#VEKEFI</div>
 
 
 <div id="veke-homepage-gallery" class="ps-container">
@@ -8112,10 +8112,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       entry.parentNode.insertBefore(script, entry);
     })();
   </script>
-  <a href="//corp.photoslurp.com" target="_blank" class="ps-poweredby-link">
-    <div class="ps-logo-widget-carousel"></div>
-  </a>
-
+ 
+<script>
+    var psContainer = document.querySelector('#veke-homepage-gallery');
+    psContainer.addEventListener('widget_click', function(e) {
+      var target = e.detail.target;
+      var img = target.querySelector('.ps-img-container img');
+      var imgIndex = Array.from(psContainer.querySelectorAll('.ps-image')).indexOf(target);
+      if (imgIndex === 2) {
+        e.stopImmediatePropagation();
+        window.location = 'http://demo.photoslurp.com/veke/lookbook.html';
+      }
+    });
+  </script>
   </div>
 
   <!--End of Photoslurp code -->

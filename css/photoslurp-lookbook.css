@@ -1,0 +1,5 @@
+/*LOOKBOOK*/
+
+.ps-prev + .ps-next {
+  display: inline-block !important;
+}

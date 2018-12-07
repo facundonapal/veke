@@ -16875,6 +16875,18 @@ body {
         line-height: 1.4
     }
 
+    .header.panel>.header.links>li.welcome,.header.panel>.header.links>li a:before {
+
+    content: '\e01f';
+    font-family: 'veke';
+    font-size: 24px;
+    top: 15px;
+    position: relative;
+    color: #2a363b;
+    -webkit-font-smoothing: antialiased;
+
+    }
+
     .header.panel>.header.links>li.welcome a {
         padding-left: 5px
     }
@@ -17416,4 +17428,17 @@ body {
     flex-direction: column;
     padding-top: 5px;
     padding-bottom: 5px
+}
+
+@media all and (min-width: 768px),print {
+
+   .panel.header .links>li:nth-child(3) a::before {
+        content: '\e01f';
+        font-family: "veke";
+        font-size: 24px;
+        top: 15px;
+        position: relative;
+        color: #2a363b;
+        -webkit-font-smoothing: antialiased
+    }
 }

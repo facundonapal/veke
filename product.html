@@ -1,32 +1,41 @@
-
 <!doctype html>
 <html lang="fi-FI">
-    <head >
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
         <script>
     var require = {
-        "baseUrl": "https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI"
+        "baseUrl": "https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI"
     };
 </script>
         <meta charset="utf-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
-<meta name="description" content="Tutustu huonekalumallistoomme ja tilaa laadukkaat, tyylikk&auml;&auml;t ja edulliset huonekalut netist&auml;. Kotiinkuljetus ja osamaksu. Klikkaa: veke.fi"/>
-<meta name="keywords" content="huonekalut, huonekaluja, kalusteet, huonekalut netist&auml;"/>
+<meta name="description" content="Huippulaadukas Cuero Pampa Mariposa lepakkotuoli nahka on oikea katseenvangitsija! Vekelt&auml; nojatuolit my&ouml;s 12 kk korottomalla osamaksulla. Klikkaa ostoksille!"/>
+<meta name="keywords" content="Cuero Pampa Mariposa lepakkotuoli nahka"/>
 <meta name="robots" content="INDEX,FOLLOW"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Huonekalut netistä edullisesti &amp; Sisustustuotteet kotiin | Veke.fi</title>
+<title>Upea Cuero Pampa Mariposa lepakkotuoli nahkaa - veke.fi</title>
+<link rel="stylesheet" type="text/css" href="css/photoslurp.css">
 
-<link  rel="stylesheet" type="text/css"  media="all" href="css/148e10f98141543c11a4d40d20257a5a.min.css" />
+<link  rel="stylesheet" type="text/css"  media="all" href="css/ac013261b6e69bdec23d249c5e32163e.min.css" />
 <link  rel="stylesheet" type="text/css"  media="screen and (min-width: 768px)" href="css/styles-l.min.css" />
 <link  rel="stylesheet" type="text/css"  media="print" href="css/3f23cb031dfaaa1b10a045eb364519fb.min.css" />
 <link  rel="stylesheet" type="text/css"  media="screen" href="css/veke.min.css" />
-
-<link  rel="stylesheet" type="text/css"  href="css/photoslurp.css" />
-
 <script  type="text/javascript"  src="js/7c108297e5fa1a0e9d4c41f69444b3c6.min.js"></script>
 <link  rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,600,700" />
 <link  rel="icon" type="image/x-icon" href="https://www.veke.fi/media/favicon/websites/1/favicon_v.png" />
 <link  rel="shortcut icon" type="image/x-icon" href="https://www.veke.fi/media/favicon/websites/1/favicon_v.png" />
+<link  rel="canonical" href="https://www.veke.fi/cuero-design-pampa-mariposa-lepakkotuoli" />
 <script type="text/javascript" src="js/sitegainer_5618717.js"></script>        <link rel="stylesheet" type="text/css" media="all"
       href="css/font-awesome.min.css"/>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+        'ecommerce': {
+            'detail': {
+                'actionField': {'list': 'Product Page'},
+                'products': [{"name":"Cuero Pampa Mariposa lepakkotuoli nahka","id":"conf-CDPAMPA-WEB","category":"Etusivun suosituimmat tuotteet","price":"850.5"}]            }
+        }
+    });
+</script>
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -35,8 +44,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TCMGV76');</script>
 <!-- End Google Tag Manager -->
+
+<meta property="og:type" content="og:product" />
+<meta property="og:title" content="Cuero Pampa Mariposa lepakkotuoli nahka" />
+<meta property="og:image" content="https://www.veke.fi/media/catalog/product/cache/image/265x265/beff4985b56e3afdbeabfc89641a4582/p/a/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg" />
+<meta property="og:description" content="&lt;p&gt;Cuero Design Pampa Mariposa lepakkotuoli on tehty laadukkaasta italialaisesta kasviparkitusta nahasta. Tuolin runko on &Oslash;12mm umpiter&auml;st&auml;. T&auml;m&auml;n tuolin istumamukavuus on omaa luokkaansa!&lt;/p&gt;" />
+<meta property="og:url" content="https://www.veke.fi/cuero-design-pampa-mariposa-lepakkotuoli" />
+    <meta property="product:price:amount" content="850.5"/>
+    <meta property="product:price:currency" content="EUR"/>
     </head>
-    <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/loader-2.gif"}}' class="vrun-view cms-home cms-index-index page-layout-1column">
+    <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/loader-2.gif"}}' class="vrun-view page-product-configurable catalog-product-view product-cuero-design-pampa-mariposa-lepakkotuoli categorypath-huonekalut-tuolit category-tuolit page-layout-1column" itemtype="http://schema.org/Product" itemscope="itemscope">
         
 <script>
     try {
@@ -172,7 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 $.initNamespaceStorage('mage-translation-file-version');
                 versionObj = $.localStorage.get('mage-translation-file-version');
 
-                if (versionObj.version !== '08402020b87bbc23c8a69a24afc6e4021b1a6a93') {
+                if (versionObj.version !== '422b071ad47ad9bdb498cc4c1f42bf060629ef70') {
                     dependencies.push(
                         'text!js-translation.json'
                     );
@@ -188,7 +205,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             $.localStorage.set(
                                 'mage-translation-file-version',
                                 {
-                                    version: '08402020b87bbc23c8a69a24afc6e4021b1a6a93'
+                                    version: '422b071ad47ad9bdb498cc4c1f42bf060629ef70'
                                 }
                             );
                         } else {
@@ -237,9 +254,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 </script>
 <script type="application/javascript">
-    window.__vaimoJavascriptMixinFlags = ["vrun-view","mof_horizontal","cms_index_index"];
+    window.__vaimoJavascriptMixinFlags = ["vrun-view","mof_horizontal","vajaxproduct_page","catalog_product_view"];
 </script>
+<script type="text/x-magento-init">
+    {"*": {"vaimoQuickView/loader":{"requestTokenParamName":"vajax_blocks"}}}</script>
+<div id="js-ajaxblocks-loader" class="ajaxblocks-loader">
+    <div class="spinner">
+        <div class="spinner-container container1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container2">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+        <div class="spinner-container container3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+    </div>
+    <div class="loader-txt">Lataa</div>
+</div>
 <div class="page-wrapper"><header class="page-header"><div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
     </div>
 <div class="panel wrapper"><div class="panel header"><ul class="header links"><li class="item link compare" data-bind="scope: 'compareProducts'" data-role="compare-products-link">
     <a class="action compare no-display" title="Vertaile tuotteita"
@@ -273,10 +319,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         }
         </script>
-    <li> <a href="https://www.veke.fi/customer/account/" >Asiakastili</a></li>
-
+    <li><a href="https://www.veke.fi/customer/account/" >Asiakastili</a></li>
 <div data-block="minicart" class="minicart-wrapper">
-
     <a class="action showcart" href="https://www.veke.fi/checkout/cart/"
        data-bind="scope: 'minicart_content'">
         <span class="text">Ostoskori</span>
@@ -291,7 +335,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </span>
         </span>
     </a>
-
             <div class="block block-minicart empty"
              data-role="dropdownDialog"
              data-mage-init='{"dropdownDialog":{
@@ -306,7 +349,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
                 <!-- ko template: getTemplate() --><!-- /ko -->
             </div>
-
                     </div>
         <script>
         window.checkout = {"shoppingCartUrl":"https:\/\/www.veke.fi\/checkout\/cart\/","checkoutUrl":"https:\/\/www.veke.fi\/checkout\/","updateItemQtyUrl":"https:\/\/www.veke.fi\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.veke.fi\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.veke.fi\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"customerLoginUrl":"https:\/\/www.veke.fi\/customer\/account\/login\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.veke.fi\/captcha\/refresh\/","isRequired":false},"guest_checkout":{"isCaseSensitive":false,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.veke.fi\/captcha\/refresh\/","isRequired":false}}};
@@ -316,7 +358,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "[data-block='minicart']": {
             "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":1,"display_cart_subtotal_excl_tax":0,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals"}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"uiComponent","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"grand-total":{"component":"Magento_Checkout\/js\/view\/summary\/grand-total","config":{"title":"Yhteens\u00e4"}},"types":[]}        },
         "*": {
-            "Magento_Ui/js/block-loader": "https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/loader-1.gif"
+            "Magento_Ui/js/block-loader": "https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/loader-1.gif"
         }
     }
     </script>
@@ -381,10 +423,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         console.timeEnd('minisearch-loaded');
     });
 </script>
-</div></div><div class="header content"><button class="toggle-mobile-menu disabled" data-id="vmenu_5c0645e1aa7d9">
+</div></div><div class="header content"><button class="toggle-mobile-menu disabled" data-id="vmenu_5c0a53dad57c3">
     <span class="toggle-mobile-menu__text">Valikko</span>
 </button>
-<nav class="v-navigation v-navigation--m-menu mm-front"  id="vmenu_5c0645e1aa7d9">
+<nav class="v-navigation v-navigation--m-menu mm-front"  id="vmenu_5c0a53dad57c3">
     <span class="close_mmenu"></span>
     <div class="v-navigation__additional-top">
         <ul class="nav-tabs">
@@ -437,12 +479,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <div id="mobile-menu-account-links" class="mm-hidden">
     <div class="mmenu-logo">
-        <a class="logo" href="https://www.veke.fi/" title="">
-    <img class="hidden-xs" src="https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/logo.svg"
+        <a class="logo" href="index.html" title="">
+    <img class="hidden-xs" src="https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/logo.svg"
          alt=""
                     />
 
-    <img class="visible-xs" src="https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/logo-without-box.svg"
+    <img class="visible-xs" src="https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/logo-without-box.svg"
          alt=""
                     />
 </a>
@@ -459,7 +501,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               method="post"
               id="login-form"
               data-mage-init='{"validation":{}}'>
-            <input name="form_key" type="hidden" value="lxbZMqHBsw45jXlN" />            <fieldset class="fieldset login" data-hasrequired="* Pakollinen kenttä">
+            <input name="form_key" type="hidden" value="ABXGj8mWq2k23Gqn" />            <fieldset class="fieldset login" data-hasrequired="* Pakollinen kenttä">
                 <div class="field note repositioner">Voit kirjautua sisään Facebook-tilin avulla tai omalla Veke -tililläsi.</div>
                 <div class="field email required">
                     <label class="label" for="email"><span>Sähköposti</span></label>
@@ -614,6 +656,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-kampanjat v-navigation__item--nav-7"  >
                 <a href="https://www.veke.fi/vinkit/kampanjat" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-kampanjat v-navigation__link--nav-7" >
                 Kampanjat                            </a>
+                <li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-kampanjat v-navigation__item--nav-7"  >
+                <a href="https://www.veke.fi/vinkit/kampanjat" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-kampanjat v-navigation__link--nav-7" >
+                #vekefi                            </a>
             
     </li>    </ul>
     </div></p>            </div>
@@ -3382,7 +3427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     console.time('mobile-menu-loaded');
 
     require(['jquery'], function() {
-        var mmenu = jQuery('#vmenu_5c0645e1aa7d9');
+        var mmenu = jQuery('#vmenu_5c0a53dad57c3');
         var toggleMobileMenu = jQuery('.toggle-mobile-menu');
 
         require(['matchMedia', 'mmenu_navbars', 'mobileSlidingMenu'], function() {
@@ -3403,12 +3448,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         });
     });
 
-</script><a class="logo" href=index.html" title="">
-    <img class="hidden-xs" src="https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/logo.svg"
+</script><a class="logo" href="index.html" title="">
+    <img class="hidden-xs" src="https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/logo.svg"
          alt=""
         width="189"        height="64"    />
 
-    <img class="visible-xs" src="https://www.veke.fi/static/version1543836028/frontend/Vaimo/veke/fi_FI/images/logo-without-box.svg"
+    <img class="visible-xs" src="https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/logo-without-box.svg"
          alt=""
         width="189"        height="64"    />
 </a>
@@ -3421,8 +3466,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <ul class="v-navigation v-navigation--mega" data-mage-init="{&quot;vmenu/component/toggle-menu&quot;:{&quot;functionality&quot;:{&quot;openOnHover&quot;:true}}}" >
         
 
-<li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-huonekalut v-navigation__item--parent v-navigation__item--nav-1"  data-mage-init='{"menuAjax": {"url": "https://www.veke.fi/menu/loader/load/?parent_id=8"}}'  >
-                <a href="https://www.veke.fi/huonekalut" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-huonekalut v-navigation__link--parent v-navigation__link--nav-1" >
+<li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-huonekalut v-navigation__item--active v-navigation__item--parent v-navigation__item--nav-1"  data-mage-init='{"menuAjax": {"url": "https://www.veke.fi/menu/loader/load/?parent_id=8"}}'  >
+                <a href="https://www.veke.fi/huonekalut" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-huonekalut v-navigation__link--active v-navigation__link--parent v-navigation__link--nav-1" >
                 Huonekalut                            </a>
             
     </li>
@@ -3509,12 +3554,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a href="https://www.veke.fi/vinkit/kampanjat" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-kampanjat v-navigation__link--nav-7" >
                 Kampanjat                            </a>
             
-    </li>  
+    </li> 
+
     <li class="v-navigation__item v-navigation__item--main v-navigation__item--level0 v-navigation__item--url-kampanjat v-navigation__item--nav-7"  >
                 <a href="lookbook.html" class="v-navigation__link v-navigation__link--main v-navigation__link--level0 v-navigation__link--url-kampanjat v-navigation__link--nav-7" >
                 #vekefi                            </a>
             
-    </li>  </ul>
+    </li>   </ul>
     </div></p></div><div class="block header-block-marketing">
     <ul class="container">
 <li class="icon icon-blank icon-blank-flag">Erämaksulla 3-60 kk maksuaikaa.</li>
@@ -3527,158 +3573,1378 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="icon icon-bv-truck">Toimitus 3-5 arkipäivää varastotuotteille.</li>
 <li class="icon icon-blank icon-blank-info icon-black-background icon-circle-box">Luotettava Suomalainen perheyritys.</li>
 </ul>
-</div></div></header><div class="magestore-bannerslider">
+</div></div></header><div class="breadcrumbs">
+    <ul class="items">
+                    <li class="item home">
+                            <a href="https://www.veke.fi/" title="Mene etusivulle">
+                    Etusivu                </a>
+                        </li>
+                    <li class="item category8">
+                            <a href="https://www.veke.fi/huonekalut" title="">
+                    Huonekalut                </a>
+                        </li>
+                    <li class="item category27">
+                            <a href="https://www.veke.fi/huonekalut/tuolit" title="">
+                    Tuolit                </a>
+                        </li>
+                    <li class="item product">
+                            <strong>Cuero Pampa Mariposa lepakkotuoli nahka</strong>
+                        </li>
+            </ul>
+</div>
+<div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
     </div>
 <main id="maincontent" class="page-main"><a id="contentarea" tabindex="-1"></a>
-
-
-<!--start PhotoSlurp embed code-->
-
-
-<div class = "wrapper-widgets">
-    <div style="text-align: center; margin: 60px 0;">   <h2 class="tab-heading">#VEKEFI</h2> </div>
-    <div class = "tabss">
-        <input type="radio" name="tabs" id="tab1" checked>
-            <label for="tab1">
-               <p class="tab-style">All</p>
-            </label>
-        <input type="radio" name="tabs" id="tab2">
-            <label for="tab2">
-               <p class="tab-style">Chairs</p>
-            </label>
-        <input type="radio" name="tabs" id="tab3">
-            <label for="tab3">
-               <p class="tab-style">Furniture</p>
-            </label>
-       <input type="radio" name="tabs" id="tab4">
-            <label for="tab4">
-               <p class="tab-style">Sofas</p>
-            </label>
-
-        <div id="tab-content1" class="tab-content">
-            <div id="widget-container1" class="ps-container">
-            
-            </div>
+<div class="page messages"><div data-placeholder="messages"></div>
+<div data-bind="scope: 'messages'">
+    <div data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text"></div>
         </div>
-        <div id="tab-content2" class="tab-content">
-            <div id="widget-container2" class="ps-container">
-                
-            </div>
-        </div>
-        <div id="tab-content3" class="tab-content">
-            <div id="widget-container3" class="ps-container">
-                
-            </div>
-        </div>
-        <div id="tab-content4" class="tab-content">
-            <div id="widget-container4" class="ps-container">
-                
-            </div>
+    </div>
+    <div data-bind="foreach: { data: messages().messages, as: 'message' }" class="messages">
+        <div data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }">
+            <div data-bind="html: message.text"></div>
         </div>
     </div>
 </div>
-
-<script data-type="photoslurp">
-                    if(!photoSlurpWidgetSettings) {
-                        var photoSlurpWidgetSettings = {};
+<!-- <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
                     }
-                    (function() { 
-                        photoSlurpWidgetSettings['widget-container1'] = {
-                        widgetType: 'gallery',
-                        albumId: 1258,
-                        lang: 'en',
-                        widgetId: 'lookbook-gallery-all',
-                        autoscrollLimit: 2, 
-                        pageLimit: 1212,
-                        varyingThumbSizes: true,
-                        pageType: 'lookbook',
-                        theme: 'modern',
-                        thumbOverlay: true,
-                        shopThisLookText:'Shop it now',
-                        ctaButton:'Buy',
-                        visibleProducts: 2,
-                        debug: true
-                    };
-                    photoSlurpWidgetSettings['widget-container2'] = {
-                        widgetType: 'gallery',
-                        albumId: 1258,
-                        lang: 'EN',
-                        widgetId: 'lookbook-gallery-pittpens',
-                        autoscrollLimit: 2, 
-                        pageLimit: 12,
-                        varyingThumbSizes: true,
-                        pageType: 'lookbook',
-                        theme: 'modern',
-                        thumbOverlay: true,
-                        collection: 'chairs',
-                        shopThisLookText:'Shop it now',
-                        ctaButton:'Buy',
-                        visibleProducts: 2,
-                        debug: true
-                    };
-                    photoSlurpWidgetSettings['widget-container3'] = {
-                        widgetType: 'gallery',
-                        albumId: 1258,
-                        lang: 'EN',
-                        widgetId: 'lookbook-gallery-fountainpens',
-                        autoscrollLimit: 2, 
-                        pageLimit: 12,
-                        varyingThumbSizes: true,
-                        pageType: 'lookbook',
-                        theme: 'modern',
-                        thumbOverlay: true,
-                        collection: 'furniture',
-                        shopThisLookText:'Shop it now',
-                        ctaButton:'Buy',
-                        visibleProducts: 2,
-                        debug: true
-                    };
-                     photoSlurpWidgetSettings['widget-container4'] = {
-                        widgetType: 'gallery',
-                        albumId: 1258,
-                        lang: 'EN',
-                        widgetId: 'lookbook-gallery-fountainpens',
-                        autoscrollLimit: 2, 
-                        pageLimit: 12,
-                        varyingThumbSizes: true,
-                        pageType: 'lookbook',
-                        theme: 'modern',
-                        thumbOverlay: true,
-                        collection: 'sofas',
-                        shopThisLookText:'Shop it now',
-                        ctaButton:'Buy',
-                        visibleProducts: 2,
-                        debug: true
-                    };
-                        var script = document.createElement('script');
-                        script.async = true;
-                        script.src = 'https://static.photoslurp.com/widget/v3/widget_loader.js';
-                        var entry = document.getElementsByTagName('script')[0];
-                        entry.parentNode.insertBefore(script, entry);
-                    })();
-                </script>
+                }
+            }
+    }
+</script> -->
+</div><div class="columns"><div class="column main container"><div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
+    </div>
+        <div data-aw-arp-block-name="awarp_content_top_product"></div>
+
+<div class="product-info-main"><div class="page-title-wrapper product">
+    <h1 class="page-title"
+                >
+        <span class="base" data-ui-id="page-title-wrapper" itemprop="name">Cuero Pampa Mariposa lepakkotuoli nahka</span>    </h1>
+    </div>
+<div class="product-info-right"><div class="product-info-stock-sku">
+    <div class="stock-container">
+            <div class="stock available" title="Saatavuus" >
+            <span itemscope><link itemprop="availability" href="http://schema.org/InStock" id="availability" />Varastossa</span>
+        </div>
+        </div>
+
+<!-- <script type="application/javascript">
+   window.isDiscountBadgeEnabled = true</script> -->
+
+<div class="product attribute sku">
+    <strong class="type">SKU</strong>    <div class="value" itemprop="sku">conf-CDPAMPA-WEB</div>
+</div>
+
+            <div class="product-delivery">
+            <div class="delivery-time">Toimitus <strong>3-5</strong> arkipäivää</div>
+        </div>
+   <!--  <script type="text/x-magento-init">
+    {
+        "#maincontent .product-info-main": {
+            "shipmentTab": {}
+        }
+    }
+</script> -->
+            <div class="delivery-first-choice"> <span class="shipping-rates-link" data-mage-init='{"shippingRatesPopup":{}}'> Toimitus alkaen 15 €</span><span class="open-shipping-rates"></span></div>
+    <div class="custom-shipping-rates">
+        <span class="shipping-rates-close"></span>
+        <ul>
+                            <li>
+                    <span class="rate-carrier">Posti Nouto lähimmästä postista: </span>
+                    <span class="rate-price">15 €</span>
+                </li>
+                            <li>
+                    <span class="rate-carrier">Posti Paketti, toimitus asuntoon sisälle: </span>
+                    <span class="rate-price">29 €</span>
+                </li>
+                    </ul>
+        <strong class="delivery-subtitle">Kuljetus koko Suomeen</strong>
+        <div class="delivery-info-block"></div>
+        <strong class="link-to-shipping-tab">Lue lisää</strong>
+    </div>
+</div></div><div class="product-info-left"><div class="product-info-price"><div class="product-name">
+    <span>Cuero Pampa Mariposa lepakkotuoli nahka</span></div>
 
 
-<!--end of photoslurp embed code-->
+<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+        <div class="rating-summary">
+         <span class="label"><span>Arvio:</span></span>
+         <div class="rating-result" title="100%">
+             <span style="width:100%"><span><span itemprop="ratingValue">100</span>% of <span itemprop="bestRating">100</span></span></span>
+         </div>
+     </div>
+        <div class="reviews-actions">
+        <a class="action view" href="https://www.veke.fi/cuero-design-pampa-mariposa-lepakkotuoli#reviews"><span itemprop="reviewCount">2</span>&nbsp;<span>Arvostelut</span></a>
+        <a class="action add" href="https://www.veke.fi/cuero-design-pampa-mariposa-lepakkotuoli#review-form">Lisää arvostelusi</a>
+    </div>
+</div>
+
+        
+    <div class="specialprice-date-container configurable" style="display: block;">
+                    <span class="specialprice-for-now-text" style="display: none;">Tarjous voimassa toistaiseksi</span>
+        
+                    <span class="specialprice-date-text" style="display: inline;">
+                                    <span>Hinta voimassa <span class="specialprice-to-date">09.12.18</span> asti</span>
+                            </span>
+            </div>
+<div class="price-box price-final_price displayPrice" data-role="priceBox" data-product-id="54291">
+    <span class="special-price">
+        
+
+<span class="price-container price-final_price tax weee" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer" itemref="availability">
+            <span class="price-label">Tarjoushinta</span>
+        <span id="product-price-54291" data-price-amount="850.5" data-price-type="finalPrice" class="price-wrapper " itemprop="price" content="850.5"><span class="price">850,50&nbsp;€</span></span>
+                <meta itemprop="priceCurrency" content="EUR">
+    </span>
+    </span>
+            
+        <div class="special-price-percent-product">-10%</div><span class="old-price sly-old-price no-display" style="display: inline-block;">
+        
+
+<span class="price-container price-final_price tax weee">
+            <span class="price-label">Regular Price</span>
+        <span id="old-price-54291" data-price-amount="945" data-price-type="oldPrice" class="price-wrapper "><span class="price">945&nbsp;€</span></span>
+        </span>
+    </span>
+            <div class="special-price-percent">-10%</div>
+    
+</div>
+            <div class="product-delivery">
+            <div class="delivery-time">Toimitus <strong>3-5</strong> arkipäivää</div>
+        </div>
+    <div class="sveapartpayoptions">
+    <p class="specialprice">
+        <span class="partpay-prices-start"> Erämaksulla alkaen  </span>
+        <span class="partpay-price open-partpaypopup"><span class="price">27,62&nbsp;€</span> / kk</span>
+        <span class="partpay-content">Laskulla 30 päivää maksuaikaa, laskutuslisä 0€</span>
+    </p>
+    <span class="open-partpay-popup open-partpaypopup"></span>
+        <div class="sveapartpaypopup">
+        <span class="partpaypopup-close"></span>
+        <div class="partpay-prices">
+                            <div class="sveapartpay-price partpay-price-1" data-partpay-selected="partpay-selected-1"><span class="price">290&nbsp;€</span> / kk
+                    <span class="partpay-duration">3 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-2" data-partpay-selected="partpay-selected-2"><span class="price">91,55&nbsp;€</span> / kk
+                    <span class="partpay-duration">10 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-3" data-partpay-selected="partpay-selected-3"><span class="price">55,97&nbsp;€</span> / kk
+                    <span class="partpay-duration">20 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-4" data-partpay-selected="partpay-selected-4"><span class="price">41,80&nbsp;€</span> / kk
+                    <span class="partpay-duration">30 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-5" data-partpay-selected="partpay-selected-5"><span class="price">34,71&nbsp;€</span> / kk
+                    <span class="partpay-duration">40 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-6" data-partpay-selected="partpay-selected-6"><span class="price">30,46&nbsp;€</span> / kk
+                    <span class="partpay-duration">50 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-7" data-partpay-selected="partpay-selected-7"><span class="price">27,62&nbsp;€</span> / kk
+                    <span class="partpay-duration">60 kk:n osamaksu</span>
+                </div>
+                        </div>
+
+        <div class="partpay-selected">
+                            <div class="partpay-details-content" id="partpay-selected-1">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">290&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">3 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">0%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-2">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">91,55&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">10 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">0%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-3">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">55,97&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">20 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-4">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">41,80&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">30 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-5">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">34,71&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">40 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-6">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">30,46&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">50 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-7">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">27,62&nbsp;€</span> / kk </div>
+                        <span class="partpay-duration">60 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90&nbsp;€</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50&nbsp;€</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                        </div>
+        <div class="to-partpay-tab">
+            <span class="link-to-partpay-tab">Näytä kaikki maksutavat</span>
+        </div>
+    </div>
+</div></div></div><div class="price-box price-tier_price" data-role="priceBox" data-product-id="54291"><script type="text/x-magento-template" id="tier-prices-template">
+    <ul class="prices-tier items">
+        <% _.each(tierPrices, function(item, key) { %>
+        <%  var priceStr = '<span class="price-container price-tier_price">'
+                + '<span data-price-amount="' + priceUtils.formatPrice(item.price, currencyFormat) + '"'
+                + ' data-price-type=""' + ' class="price-wrapper ">'
+                + '<span class="price">' + priceUtils.formatPrice(item.price, currencyFormat) + '</span>'
+                + '</span>'
+            + '</span>'; %>
+        <li class="item">
+            <%= $t('Buy %1 for %2 each and').replace('%1', item.qty).replace('%2', priceStr) %>
+                <strong class="benefit">
+                        <%= $t('save') %><span class="percent tier-<%= key %>">&nbsp;<%= item.percentage %></span>%
+                </strong>
+        </li>
+        <% }); %>
+    </ul>
+</script>
+<div data-role="tier-price-block"></div>
+</div>
+<div class="product attribute overview">
+        <div class="value" itemprop="description"><p>Cuero Design Pampa Mariposa lepakkotuoli on tehty laadukkaasta italialaisesta kasviparkitusta nahasta. Tuolin runko on &Oslash;12mm umpiter&auml;st&auml;. T&auml;m&auml;n tuolin istumamukavuus on omaa luokkaansa!</p></div>
+</div>
+
+<div class="product-add-form">
+    <form data-product-sku="conf-CDPAMPA-WEB"
+          action="https://www.veke.fi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVrZS5maS9jdWVyby1kZXNpZ24tcGFtcGEtbWFyaXBvc2EtbGVwYWtrb3R1b2xp/product/54291/" method="post"
+          id="product_addtocart_form">
+        <input type="hidden" name="product" value="54291" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <input name="form_key" type="hidden" value="ABXGj8mWq2k23Gqn" />                                            <div class="product-options-wrapper" id="product-options-wrapper" data-hasrequired="* Pakollinen kenttä">
+    <div class="fieldset" tabindex="0">
+        <div class="swatch-opt swatch-rendered" data-role="swatch-options">
+    <div class="swatch-opt-loading swatch-opt-loading-hide">
+        <img src="https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/images/loader.gif">
+    </div>
+<div class="swatch-attribute color" attribute-code="color" attribute-id="93" option-selected="4013779"><span id="option-label-color-93" class="swatch-attribute-label">Väri</span><span class="swatch-attribute-selected-option">Polo</span><div aria-activedescendant="option-label-color-93-item-4013779" tabindex="0" aria-invalid="false" aria-required="true" role="listbox" aria-labelledby="option-label-color-93" class="swatch-attribute-options clearfix"><div class="option-container"><span class="label">Black</span><div class="swatch-option color" id="option-label-color-93-item-4013852" aria-checked="false" aria-describedby="option-label-color-93" tabindex="0" option-type="1" option-id="4013852" data-option-id="4013852" data-attribute-id="93" option-label="Black" aria-label="Black" option-tooltip-thumb="" option-tooltip-value="#000000" role="option" style="background: #000000 no-repeat center; background-size: initial;"></div></div><div class="option-container"><span class="label">Montana</span><div class="swatch-option image" id="option-label-color-93-item-4014625" aria-checked="false" aria-describedby="option-label-color-93" tabindex="0" option-type="2" option-id="4014625" data-option-id="4014625" data-attribute-id="93" option-label="Montana" aria-label="Montana" option-tooltip-thumb="https://www.veke.fi/media/attribute/swatch/swatch_thumb/470x380/m/o/montana.jpg" option-tooltip-value="https://www.veke.fi/media/attribute/swatch/swatch_image/470x380/m/o/montana.jpg" role="option" style="background: url(https://www.veke.fi/media/attribute/swatch/swatch_image/470x380/m/o/montana.jpg) no-repeat center; background-size: initial;"></div></div><div class="option-container"><span class="label">Chocolate</span><div class="swatch-option color" id="option-label-color-93-item-4014449" aria-checked="false" aria-describedby="option-label-color-93" tabindex="0" option-type="1" option-id="4014449" data-option-id="4014449" data-attribute-id="93" option-label="Chocolate" aria-label="Chocolate" option-tooltip-thumb="" option-tooltip-value="#2C0E05" role="option" style="background: #2C0E05 no-repeat center; background-size: initial;"></div></div><div class="option-container"><span class="label">Polo</span><div class="swatch-option color selected" id="option-label-color-93-item-4013779" aria-checked="true" aria-describedby="option-label-color-93" tabindex="0" option-type="1" option-id="4013779" data-option-id="4013779" data-attribute-id="93" option-label="Polo" aria-label="Polo" option-tooltip-thumb="" option-tooltip-value="#D08F27" role="option" style="background: #D08F27 no-repeat center; background-size: initial;"></div></div><div class="option-container"><span class="label">Crude Nature</span><div class="swatch-option image" id="option-label-color-93-item-4015228" aria-checked="false" aria-describedby="option-label-color-93" tabindex="0" option-type="2" option-id="4015228" data-option-id="4015228" data-attribute-id="93" option-label="Crude Nature" aria-label="Crude Nature" option-tooltip-thumb="https://www.veke.fi/media/attribute/swatch/swatch_thumb/470x380/c/r/crude-nature.jpg" option-tooltip-value="https://www.veke.fi/media/attribute/swatch/swatch_image/470x380/c/r/crude-nature.jpg" role="option" style="background: url(https://www.veke.fi/media/attribute/swatch/swatch_image/470x380/c/r/crude-nature.jpg) no-repeat center; background-size: initial;"></div><a class="show-more" data-attribute-id="93" data-option-id="4015228">Lue lisää</a></div></div><input class="swatch-input super-attribute-select" name="super_attribute[93]" type="text" value="" data-selector="super_attribute[93]" data-validate="{required: true}" aria-required="true" aria-invalid="false" data-attr-name="color"></div><div class="swatch-attribute jalat" attribute-code="jalat" attribute-id="210" option-selected="612928"><span id="option-label-jalat-210" class="swatch-attribute-label">Jalat</span><span class="swatch-attribute-selected-option">Musta</span><div aria-activedescendant="option-label-jalat-210-item-612928" tabindex="0" aria-invalid="false" aria-required="true" role="listbox" aria-labelledby="option-label-jalat-210" class="swatch-attribute-options clearfix"><div class="swatch-option text" id="option-label-jalat-210-item-4013780" aria-checked="false" aria-describedby="option-label-jalat-210" tabindex="0" option-type="0" option-id="4013780" data-option-id="4013780" data-attribute-id="210" option-label="Mattakromi" aria-label="Mattakromi" option-tooltip-thumb="" option-tooltip-value="Mattakromi" role="option">Mattakromi</div><div class="swatch-option text selected" id="option-label-jalat-210-item-612928" aria-checked="true" aria-describedby="option-label-jalat-210" tabindex="0" option-type="0" option-id="612928" data-option-id="612928" data-attribute-id="210" option-label="Musta" aria-label="Musta" option-tooltip-thumb="" option-tooltip-value="Musta" role="option">Musta</div></div><input class="swatch-input super-attribute-select" name="super_attribute[210]" type="text" value="" data-selector="super_attribute[210]" data-validate="{required: true}" aria-required="true" aria-invalid="false" data-attr-name="jalat"></div></div>
 
 
 
+<script>
+require([
+    "jquery",
+    "jquery/ui"
+], function($){
 
-</main>
+//<![CDATA[
+    $.extend(true, $, {
+        calendarConfig: {
+            dayNames: ["sunnuntaina","maanantaina","tiistaina","keskiviikkona","torstaina","perjantaina","lauantaina"],
+            dayNamesMin: ["su","ma","ti","ke","to","pe","la"],
+            monthNames: ["tammikuuta","helmikuuta","maaliskuuta","huhtikuuta","toukokuuta","kes\u00e4kuuta","hein\u00e4kuuta","elokuuta","syyskuuta","lokakuuta","marraskuuta","joulukuuta"],
+            monthNamesShort: ["tammikuuta","helmikuuta","maaliskuuta","huhtikuuta","toukokuuta","kes\u00e4kuuta","hein\u00e4kuuta","elokuuta","syyskuuta","lokakuuta","marraskuuta","joulukuuta"],
+            infoTitle: "Tietoa kalenterista",
+            firstDay: 1,
+            closeText: "Sulje",
+            currentText: "Valitse tämä päivä",
+            prevText: "Edellinen",
+            nextText: "Seuraava",
+            weekHeader: "WK",
+            timeText: "Aika",
+            hourText: "Hour",
+            minuteText: "Minute",
+            dateFormat: $.datepicker.RFC_2822,
+            showOn: "button",
+            showAnim: "",
+            changeMonth: true,
+            changeYear: true,
+            buttonImageOnly: null,
+            buttonImage: null,
+            showButtonPanel: true,
+            showWeek: true,
+            timeFormat: '',
+            showTime: false,
+            showHour: false,
+            showMinute: false
+        }
+    });
+
+    enUS = {"m":{"wide":["January","February","March","April","May","June","July","August","September","October","November","December"],"abbr":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]}}; // en_US locale reference
+//]]>
+
+});
+</script>
+    </div>
+</div>
+<div class="availability_partpay_mobile">
+            <div class="product-delivery">
+            <div class="delivery-time">Toimitus <strong>3-5</strong> arkipäivää</div>
+        </div>
+    
+    <div class="stock-container">
+            <div class="stock available" title="Saatavuus" >
+            <span itemscope><link itemprop="availability" href="http://schema.org/InStock" id="availability" />Varastossa 10 kpl</span>
+        </div>
+        </div>
+</div><script type="text/x-magento-init">
+    {
+        "#maincontent .product-info-main": {
+            "shipmentTab": {}
+        }
+    }
+</script>
+            <div class="delivery-first-choice"> <span class="shipping-rates-link" data-mage-init='{"shippingRatesPopup":{}}'> Toimitus alkaen 15 €</span><span class="open-shipping-rates"></span></div>
+    <div class="custom-shipping-rates">
+        <span class="shipping-rates-close"></span>
+        <ul>
+                            <li>
+                    <span class="rate-carrier">Posti Nouto lähimmästä postista: </span>
+                    <span class="rate-price">15 €</span>
+                </li>
+                            <li>
+                    <span class="rate-carrier">Posti Paketti, toimitus asuntoon sisälle: </span>
+                    <span class="rate-price">29 €</span>
+                </li>
+                    </ul>
+        <strong class="delivery-subtitle">Kuljetus koko Suomeen</strong>
+        <div class="delivery-info-block"></div>
+        <strong class="link-to-shipping-tab">Lue lisää</strong>
+    </div>
+<div class="partpay_info_mobile"><div class="sveapartpayoptions" data-mage-init='{"Vaimo_VekePaymentExtension/js/partpaypopup":{}}'>
+    <p class="specialprice">
+        <span class="partpay-prices-start"> Erämaksulla alkaen  </span>
+        <span class="partpay-price open-partpaypopup"><span class="price">27,62 €</span> / kk</span>
+        <span class="partpay-content">Laskulla 30 päivää maksuaikaa, laskutuslisä 0€</span>
+    </p>
+    <span class="open-partpay-popup open-partpaypopup"></span>
+        <div class="sveapartpaypopup">
+        <span class="partpaypopup-close"></span>
+        <div class="partpay-prices">
+                            <div class="sveapartpay-price partpay-price-1" data-partpay-selected="partpay-selected-1"><span class="price">290 €</span> / kk
+                    <span class="partpay-duration">3 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-2" data-partpay-selected="partpay-selected-2"><span class="price">91,55 €</span> / kk
+                    <span class="partpay-duration">10 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-3" data-partpay-selected="partpay-selected-3"><span class="price">55,97 €</span> / kk
+                    <span class="partpay-duration">20 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-4" data-partpay-selected="partpay-selected-4"><span class="price">41,80 €</span> / kk
+                    <span class="partpay-duration">30 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-5" data-partpay-selected="partpay-selected-5"><span class="price">34,71 €</span> / kk
+                    <span class="partpay-duration">40 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-6" data-partpay-selected="partpay-selected-6"><span class="price">30,46 €</span> / kk
+                    <span class="partpay-duration">50 kk:n osamaksu</span>
+                </div>
+                                <div class="sveapartpay-price partpay-price-7" data-partpay-selected="partpay-selected-7"><span class="price">27,62 €</span> / kk
+                    <span class="partpay-duration">60 kk:n osamaksu</span>
+                </div>
+                        </div>
+
+        <div class="partpay-selected">
+                            <div class="partpay-details-content" id="partpay-selected-1">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">290 €</span> / kk </div>
+                        <span class="partpay-duration">3 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">0%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-2">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">91,55 €</span> / kk </div>
+                        <span class="partpay-duration">10 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">0%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-3">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">55,97 €</span> / kk </div>
+                        <span class="partpay-duration">20 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-4">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">41,80 €</span> / kk </div>
+                        <span class="partpay-duration">30 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">9,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-5">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">34,71 €</span> / kk </div>
+                        <span class="partpay-duration">40 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-6">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">30,46 €</span> / kk </div>
+                        <span class="partpay-duration">50 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                                <div class="partpay-details-content" id="partpay-selected-7">
+                    <div class="partpay-amount">
+                        <div class="partpay-amount-month"><span class="price">27,62 €</span> / kk </div>
+                        <span class="partpay-duration">60 kk:n osamaksu</span>
+                    </div>
+                    <div class="sveapartpay-details">
+                        <div class="sveapartpay-fees"><span>Korko</span>  <span class="partpay-details-right">9.8%</span></div>
+                        <div class="sveapartpay-fees"><span>Avausmaksu</span>  <span class="partpay-details-right"><span class="price">39,90 €</span></span></div>
+                        <div class="sveapartpay-fees"><span>Laskutuslisä</span>  <span class="partpay-details-right"><span class="price">6,50 €</span>/kk</span></div>
+                        <span class="yearly-interest">Tyypillisen 2000€ luoton todellinen vuosikorko 60 kk maksuajalla 18,13%</span>
+                    </div>
+                </div>
+                        </div>
+        <div class="to-partpay-tab">
+            <span class="link-to-partpay-tab" data-mage-init='{ "paymentMethodsTab": {} }'>Näytä kaikki maksutavat</span>
+        </div>
+    </div>
+</div></div><div class="product-options-bottom">
+        <div class="box-tocart">
+        <div class="fieldset">
+                            <div class="field qty">
+                    <label class="label" for="qty"><span>Määrä</span></label>
+                    <div class="control">
+                        <span class="product-view-qty-switch icon-bb-more"></span>
+                        <input type="number"
+                               name="qty"
+                               id="qty"
+                               maxlength="12"
+                               value="1"
+                               title="Määrä" class="input-text qty"
+                               data-validate="{&quot;required-number&quot;:true,&quot;validate-item-quantity&quot;:{&quot;minAllowed&quot;:1}}"
+                        />
+                                                    <span class="product-view-qty-switch icon-bc-less-disabled"></span>
+                                            </div>
+                </div>
+                        <div class="actions">
+                <button type="submit"
+                        title="Lisää ostoskoriin"
+                        class="action primary tocart"
+                        id="product-addtocart-button">
+                    <span>Lisää ostoskoriin</span>
+                </button>
+                <p class="error-text" style="display: none;">Valitse kaikki tuotemääritteet</p>
+                            </div>
+        </div>
+    </div>
+
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/product/view/validation": {
+                "radioCheckboxClosest": ".nested"
+            }
+        },
+
+        ".gallery-placeholder": {
+            "pixmoorConfig": {}
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "catalogAddToCart": {
+                "bindSubmit": true,
+                "productDefaultQty": 1            }
+        }
+    }
+
+</script><div class="product-about">
+<span class="product-about-link"><a href="#" id="product-question-link" data-mage-init='{ "Vaimo_Productquestion/js/productquestion": {"url": "https://www.veke.fi/"}}'>Kysy tästä tuotteesta</a></span>
 
 
 
-<footer class="page-footer"><div class="footer content">
+<a href="javascript:window.print()" class="product-print">Tulosta tuotteen tiedot</a></div><div class="store_stock_info_wrapper"><div class="webstore_stock_wrapper">
+<div class="stock-title-container" data-mage-init='{"warehouseStockStatus": {
+"url": "https://www.veke.fi//warehouse/product/stock?product_id=54291" ,
+"id": "54291"
+ , "webstoreStockdata": {"54776":{"qty":1,"receive_date":"2017-11-15 00:00:00","deliverytime":"3-4"},"54775":{"qty":3,"receive_date":"2018-11-16 00:00:00","deliverytime":"3-4"},"59871":{"qty":1,"receive_date":"2017-11-21 00:00:00","deliverytime":"3-4"},"59870":{"qty":4,"receive_date":"2018-11-16 00:00:00","deliverytime":"3-4"},"73629":{"qty":0,"receive_date":"2018-12-12 00:00:00","deliverytime":"3-4"},"72842":{"qty":4,"receive_date":"2018-11-16 00:00:00","deliverytime":"3-4"},"54290":{"qty":2,"receive_date":"2018-09-05 00:00:00","deliverytime":"3-4"},"54289":{"qty":10,"receive_date":"2018-11-16 00:00:00","deliverytime":"3-4"},"73628":{"qty":0,"receive_date":null,"deliverytime":"3-4"},"72841":{"qty":0,"receive_date":null,"deliverytime":"3-4"}}  }}'>
+    <div class="stock-availability">
+        <span class="availability_title">Tarkemmat saatavuustiedot</span>
+        <span class="availability_toggle"></span>
+    </div>
+    <span class="availability-error"></span>
+    <div class="webstore-availability">
+        <span class="delivery-webstore-title">Toimitus verkkokaupasta</span>
+        <table class="webstore-stock-info">
+            <tr class="store-stock-webstore">
+                <td class="webstore-label not-null">Verkkokauppa</td>
+                <td class="webstore-qty not-null"> 9</td>
+            </tr>
+        </table>
+    </div>
+</div>
+            <div class="product-delivery">
+            <div class="delivery-time">Toimitus <strong>3-5</strong> arkipäivää</div>
+        </div>
+    </div><div class="deptstore-stock-wrapper">
+    <span class="dept-store-title">Myymäläsaatavuus</span>
+    <table>
+        <tr>
+            <th></th>
+            <th class="display-title">Esillä</th>
+            <th class="instock-title">Varastossa</th>
+        </tr>
+    </table>
+    <table class="store-stock-info"></table>
+</div>
 
-    <div class="container-fluid">
-            <div class="vaimo-cms row">
-                            <div class=" vcms-layout--item vcms-left col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="vcms-standard-output">
 
-                        <div class="tagboard-content"><!-- <div class="some-title" id="some-container">SOME</div>
-<div class="tagboard-embed" tgb-embed-id="1495" tgb-built-iframe="1"><iframe src="https://embed.tagboard.com/1495#id=1" onload="tgbEmbed.frameLoaded(1)" class="tagboard-iframe" tgb-frame-id="1" name="tagboard" style="border: 0px; width: 100%; height: 519px;" title="Tagboard Embed" scrolling="no"></iframe></div>
-<script src="https://static.tagboard.com/embed/assets/js/embed.js"></script> --></div><ul class="footer links">
-<div class="row-centered">
+</div></div>
+                    
+                    </form>
+</div>
+<script>
+    require([
+        'jquery',
+        'priceBox'
+    ], function($){
+        var dataPriceBoxSelector = '[data-role=priceBox]',
+            dataProductIdSelector = '[data-product-id=54291]',
+            priceBoxes = $(dataPriceBoxSelector + dataProductIdSelector);
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+
+        priceBoxes.priceBox({'priceConfig': {"productId":"54291","priceFormat":{"pattern":"%s\u00a0\u20ac","precision":2,"requiredPrecision":2,"decimalSymbol":",","groupSymbol":"\u00a0","groupLength":3,"integerRequired":1,"stripDecimalsWhenZero":1},"prices":{"oldPrice":{"amount":945,"adjustments":[]},"basePrice":{"amount":685.88709577419,"adjustments":[]},"finalPrice":{"amount":850.5,"adjustments":[]}},"idSuffix":"_clone","tierPrices":[],"calculationAlgorithm":"ROW_BASE_CALCULATION"}});
+    });
+</script>
+</div><div class="product media">
+<style>
+    .gallery-placeholder.loading .fotorama__spinner {
+        background-image: url(https://www.veke.fi/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/p/a/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg);
+    }
+</style>
+<div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
+    <div data-role="loader" class="loading-mask">
+        <div class="loader">
+            <!-- Fix for fotorama's poor performance, loads the first image before loading the script -->
+            <img class="fotorama-loading-image" src="https://www.veke.fi/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/p/a/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg">
+        </div>
+    </div>
+</div>
+<!--Fix for jumping content. Loader must be the same size as gallery.-->
+<script>
+    var config = {
+            "width": 700,
+            "thumbheight": 90,
+            "navtype": "slides",
+            "height": 700        },
+        thumbBarHeight = 0,
+        loader = document.querySelectorAll('[data-gallery-role="gallery-placeholder"] [data-role="loader"]')[0];
+
+    if (config.navtype === 'horizontal') {
+        thumbBarHeight = config.thumbheight;
+    }
+
+    loader.style.paddingBottom = ( config.height / config.width * 100) + "%";
+</script>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": {"fullscreenzoom":"20","top":"","left":"","width":"","height":"","eventType":"hover","enabled":"false"},
+                "data": [{"thumb":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/thumbnail\/90x90\/beff4985b56e3afdbeabfc89641a4582\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","img":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/image\/700x700\/e9c3970ab036de70892d86c6d221abfe\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","full":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/image\/e9c3970ab036de70892d86c6d221abfe\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","caption":"Cuero Design Pampa Mariposa Polo lepakkotuoli","position":"3","isMain":true}],
+                "options": {
+                    "nav": "thumbs",
+                                            "loop": true,
+                                                                "keyboard": true,
+                                                                "arrows": true,
+                                                                "allowfullscreen": true,
+                                                                "showCaption": false,
+                                        "width": "700",
+                    "navwidth": "370",
+                    "thumbwidth": "90",
+                                            "thumbheight": 90,
+                                                                "height": 700,
+                                                                "transitionduration": 500,
+                                        "transition": "slide",
+                                            "navarrows": true,
+                                        "navtype": "slides",
+                    "navdir": "horizontal"
+                },
+                "fullscreen": {
+                    "nav": "dots",
+                                            "loop": true,
+                                        "navdir": "horizontal",
+                                        "navtype": "slides",
+                                            "arrows": false,
+                                                                "showCaption": false,
+                                                                "transitionduration": 500,
+                                        "transition": "dissolve"
+                },
+                "breakpoints": {"mobile":{"conditions":{"max-width":"767px"},"options":{"options":"","nav":"dots","allowfullscreen":"false"}}}            }
+        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "galleryLoader": {}
+        }
+    }
+</script>
+<ul class="product-details">
+    <!--<li class="view">365°</li>-->
+    
+
+</ul>
+
+<img src="assets/img/minigal.jpg" alt="">
+
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "pixmoorAddon": {
+                "pixmoorTags": "",
+                "data": [{"thumb":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/thumbnail\/90x90\/beff4985b56e3afdbeabfc89641a4582\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","img":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/image\/700x700\/e9c3970ab036de70892d86c6d221abfe\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","full":"https:\/\/www.veke.fi\/media\/catalog\/product\/cache\/image\/e9c3970ab036de70892d86c6d221abfe\/p\/a\/pampa_mariposa_polo_hr_musta_jalka_2000px_1.jpg","caption":"Cuero Design Pampa Mariposa Polo lepakkotuoli","position":"3","isMain":true}],
+                "thumbnail": "https://www.veke.fi/static/version1544017259/frontend/Vaimo/veke/fi_FI/Vaimo_Pixmoor/images/pixmoor/360degree.png"
+            }
+        }
+    }
+</script>
+</div>
+
+
+                        <div class="block related" data-mage-init='{"relatedProducts":{"relatedCheckbox":".related.checkbox"}}'
+            data-limit="0" data-shuffle="0">
+                <div class="block-title title">
+        <strong id="block-related-heading" role="heading" aria-level="2" data-mage-init='{"shippingRatesPopup":{}}'>Osta lisäksi</strong>
+    </div>
+
+            <div class="additional-product-info">
+                <span class="close-icon"></span>
+                <div class="additional-product-block">
+                    <p>Lis&auml;t&auml;&auml;n ostoskoriin painamalla palloa painiketta. Kun tuote lis&auml;tty ostoskoriin painike muuttuu vihre&auml;ksi.</p>
+<p>Tuotteissa joissa eri vaihtoehtoja painiketta painamalla avautuu ikkuna jossa valinnat tehd&auml;&auml;n ja lis&auml;t&auml;&auml;n tuote ostoskoriin.</p>                </div>
+            </div>
+
+    <div class="block-content content" aria-labelledby="block-related-heading">
+                <div class="products wrapper grid products-grid products-related">
+            <ol class="products list items product-items row">
+                                                                                                                                                                                <li class="item product product-item col-md-3 col-sm-12">                                                <div class="product-item-info "><!-- related_products_list-->                            <div class="product photo product-item-photo">
+                                
+<span class="product-image-container"
+      style="width:130px;">
+    <span class="product-image-wrapper"
+          style="padding-bottom: 100%;">
+        <img class="product-image-photo"
+                          src="https://www.veke.fi/media/catalog/product/cache/small_image/130x130/beff4985b56e3afdbeabfc89641a4582/1/_/1.png"
+             width="130"
+             height="130"
+             alt="Cuero Tricorona jakkara/rahi"/></span>
+</span>
+                                <a class="vaimo-quickview" data-quickview-url='https://www.veke.fi/catalog/product/view/id/61773/' href="javascript:void(0);"><span>Pikakatselu</span></a>
+                            </div>
+                            <div class="product details product-item-details">
+                                <strong class="product name product-item-name">
+                                    <a class="product-item-link"
+                                       title="Cuero Tricorona Pampa jakkara/rahi"
+                                       href="https://www.veke.fi/cuero-tricorona-pampa-jakkara-rahi-1">
+                                        Cuero Tricorona Pampa jakkara/rahi                                    </a>
+                                </strong>
+
+                                <div class="price-box price-final_price" data-role="priceBox" data-product-id="61773">
+    <span class="special-price">
+        
+
+<span class="price-container price-final_price tax weee"
+        >
+            <span class="price-label">Tarjoushinta</span>
+        <span  id="product-price-61773"                data-price-amount="265.5"
+        data-price-type="finalPrice"
+        class="price-wrapper "
+        >
+        <span class="price">265,50 €</span>    </span>
+        </span>
+    </span>
+            <div class='special-price-percent-product'>-10%</div>
+        <span class="old-price sly-old-price no-display">
+        
+
+<span class="price-container price-final_price tax weee"
+        >
+            <span class="price-label">Regular Price</span>
+        <span  id="old-price-61773"                data-price-amount="295"
+        data-price-type="oldPrice"
+        class="price-wrapper "
+        >
+        <span class="price">295 €</span>    </span>
+        </span>
+    </span>
+            <div class='special-price-percent'>-10%</div>
+    
+</div>                                                                                                                                            <div class="stock unavailable backorder" title="Saatavuus">
+                                            <span>Tilaustuote</span>
+                                        </div>
+                                                                    
+                            </div>
+                                                            <div class="product actions product-item-actions">
+                                                                            <div class="actions-primary">
+                                                                                                                                                <form data-role="tocart-form" action="https://www.veke.fi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVrZS5maS9jdWVyby1kZXNpZ24tcGFtcGEtbWFyaXBvc2EtbGVwYWtrb3R1b2xp/product/61773/" method="post"
+                                                          data-add-url="https://www.veke.fi/checkout/cart/add/uenc/aHR0cHM6Ly93d3cudmVrZS5maS9jdWVyby1kZXNpZ24tcGFtcGEtbWFyaXBvc2EtbGVwYWtrb3R1b2xp/product/61773/"
+                                                          data-remove-url="https://www.veke.fi/checkout/sidebar/removeItem/"
+                                                          data-update-url="https://www.veke.fi/checkout/sidebar/updateItemQty/"
+                                                          data-product-sku="conf-x4010_x4164-WEB"
+                                                          data-product-id="61773"
+                                                          data-is-configurable="1"
+                                                          data-is-related-item="1">
+                                                        <input type="hidden" name="product" value="61773">
+                                                        <input type="hidden" name="uenc" value="aHR0cHM6Ly93d3cudmVrZS5maS9jaGVja291dC9jYXJ0L2FkZC91ZW5jL2FIUjBjSE02THk5M2QzY3VkbVZyWlM1bWFTOWpkV1Z5Ynkxa1pYTnBaMjR0Y0dGdGNHRXRiV0Z5YVhCdmMyRXRiR1Z3WVd0cmIzUjFiMnhwL3Byb2R1Y3QvNjE3NzMv">
+                                                    <input class="formkey" type="hidden" name="form_key">
+                                                    <div class="field qty">
+                                                            <label class="label" for="qty"><span>Määrä</span></label>
+                                                            <div class="control">
+                                                                <span class="product-view-qty-switch icon icon-bb-more"></span>
+                                                                <input type="number"
+                                                                       name="qty"
+                                                                       min="0"
+                                                                       maxlength="12"
+                                                                       value="1"
+                                                                       title="Määrä" class="input-text qty"
+                                                                   data-validate="null"
+                                                            />
+                                                            <span class="product-view-qty-switch icon icon-bc-less"></span>
+                                                        </div>
+                                                    </div>
+                                                                                                            <button type="submit"
+                                                                disabled
+                                                                class="action tocart primary vaimo-quickview related-configurable-quickview"
+                                                                data-quickview-url="https://www.veke.fi/catalog/product/view/id/61773/" href="javascript:void(0);"></button>
+                                                                                                    </form>
+                                                                                    </div>
+                                    
+                                                                            <div class="secondary-addto-links actions-secondary"
+                                             data-role="add-to-links">
+                                                                                    </div>
+                                                                    </div>
+                                                    </div>
+                        </li>                                                </ol>
+        </div>
+    </div>
+    </div>
+
+    <script type="text/x-magento-init">
+        {
+            "[data-role=tocart-form]": {
+                "catalogAddToCart": {}
+            },
+            ".block.related": {
+                "productGridAdjust": {
+                    "container": ".products-grid",
+                    "itemSelector": ".product-item",
+                    "baseOn": {
+                        "desktop": [".product-item-name"],
+                        "mobile": []
+                    }
+                }
+            }
+        }
+    </script>
+    <div class="product info detailed">
+                <div class="product data items" data-mage-init='{
+            "tabs": {
+                "openedState":"active",
+                "active": 0,
+                "collapsible": true
+            }}'>
+                            
+                                    <div class="data item title"
+                         aria-labeledby="tab-label-product_info_attributes-title"
+                         data-role="collapsible" id="tab-label-product_info_attributes">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#product_info_attributes"
+                           id="tab-label-product_info_attributes-title">
+                            Tuoteinfo                        </a>
+                    </div>
+                    <div class="data item content" id="product_info_attributes" data-role="content" style="display: block;">
+                        <div>
+    </div>
+    <div class="col-xs-12 col-md-12 description">
+                   <h2>Huippulaadukas ja tyylikäs Cuero Pampa Mariposa lepakkotuoli</h2>
+        
+        <p>Cuero Design Pampa Mariposa lepakkotuoli on tehty laadukkaasta italialaisesta, kasviparkitusta nahasta. Nahka tulee Toscanan alueelta, josta tulee perinteisesti paras kasviparkittu nahka. Tuolin runko on &Oslash;12mm umpiter&auml;st&auml;. Runko antaa lepakkotuolille olennaisen keve&auml;n ja ilmavan ulkon&auml;&ouml;n tinkim&auml;tt&auml; tukevuudesta ja vakaudesta. Huomioithan, ett&auml; t&auml;h&auml;n upeaakin upeampaan lepakkotuoliin on saatavana meilt&auml; Cuero Tricorona Pampa rahi, t&auml;ydent&auml;m&auml;&auml;n istuinmukavuutta!</p>
+<p><strong>Pampa nahka:</strong></p>
+<p><strong></strong>Nahka tulee Italiasta, Toscanan alueelta, josta tulee paras kasviparkittu nahka. Pampa Mariposa lepakkotuolin nahka parkitaan ja v&auml;rj&auml;t&auml;&auml;n perinteisesti kasviper&auml;isill&auml; aineilla. N&auml;in valmistettu nahka patinoituu ajan my&ouml;t&auml; kauniisti.</p>
+<p><strong>Klassikko jo syntyess&auml;&auml;n &bull; Lepakkotuolin tarina</strong></p>
+<p>Bat chair, Butterfly, La Mariposa... rakkaalla lapsella on monta nime&auml;. Buenos Airesissa suunniteltu ja v. 1938 esitelty designklassikko nimettiin alunperin BKF-tuoliksi kolmen suunnittelijansa (Bonet, Kurchan ja Ferrari-Hardoy) mukaan. Meill&auml; tuoli tunnetaan parhaiten lepakkotuolina.</p>
+<p>Vuonna 1940 Edgar Kaufmann Jr, joka johti tuolloin New Yorkin Nykytaiteen Museota (MoMA), toi Buenos Airesista tuolin museon kokoelmiin, ja loppu onkin historiaa. T&auml;n&auml; p&auml;iv&auml;n&auml; tuo alkuper&auml;inen lepakkotuoli on n&auml;ht&auml;viss&auml; tuossa maailman johtavan modernia taidetta ja designia esittelev&auml;n laitoksen kokoelmissa.</p>
+<p>Lepakkotuolin arvon tunnisti 40-luvun alussa suomalainen Artek, jonka amerikkalainen tyt&auml;ryhti&ouml; Artek-Pascoe aloitti ensimm&auml;isen&auml; tuolin teollisen tuotannon. Tuolista muodostuikin todellinen menestys seuraavina vuosikymmenin&auml;, erityisesti nuoremman polven keskuudessa modernina ja rentona istuimena. Lepakkotuoli on sittemmin vakiinnuttanut paikkansa er&auml;&auml;n&auml; 20. vuosisadan kalustesuunnittelun ikonina.</p>
+<p>Lepakkotuolin kest&auml;v&auml; design ja moderni henki el&auml;&auml; t&auml;ss&auml; ajassa vahvana Cuero Designin valmistamassa korkealaatuisessa Mariposa tuolissa.</p>
+<p>Cueron pitk&auml;ll&auml; kokemuksella, erityisesti nahan ja vuodan jalostuksessa, on Mariposan vankka, ruotsalainen ter&auml;srunko saanut istuinverhoilukseen perinteisin menetelmin k&auml;sitelty&auml; nahkaa sek&auml; lehm&auml;n- ja lampaantaljaa alan parhailta tuottajilta.</p>
+<p><strong>Muualla kirjoitettua t&auml;st&auml; tuotteesta:</strong></p>
+<ul>
+<li><a href="https://www.jhdesign.fi/cuero-pampa-mariposa/" target="_blank">Blogi: JH Design - Cuero Pampa Mariposa - 24.1.2018</a></li>
+</ul>    </div>
+<div class="product-attribute-container col-md-12">
+            <div class="attribute-groups row">
+                        <div class="attribute-group-container">
+        <div class="attribute-group-name"> Tekniset Tiedot:</div>
+        <div class="attribute-group">
+                                                <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Tyylisuunta                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            Moderni &amp; Skandinaavinen, Retro &amp; Vintage                                                                                    </dd>
+                    </dl>
+                                                                <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Verhoilumateriaali                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            Nahkaverhoilu                                                                                    </dd>
+                    </dl>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Istuinasento                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            Rento                                                                                    </dd>
+                    </dl>
+                                                                                                                                                    <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Runkomateriaali                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            Teräs                                                                                    </dd>
+                    </dl>
+                                                                <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Tuotteen valmiusaste                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            Osina paketissa, vaatii kasaamista                                                                                    </dd>
+                    </dl>
+                                                                                            <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Brändi                        </dt>
+                        <dd class="attribute-value">
+                                                                                        <a class="attribute-value-link" href="https://www.veke.fi/vinkit/brandit/cuero">
+                                    Cuero                                </a>
+                                                    </dd>
+                    </dl>
+                                                                                            </div>
+    </div>
+                        <div class="attribute-group-container">
+        <div class="attribute-group-name"> Mitat:</div>
+        <div class="attribute-group">
+                                                                            <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Leveys                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            89 cm                                                                                    </dd>
+                    </dl>
+                                                                                            <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Syvyys                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            84 cm                                                                                    </dd>
+                    </dl>
+                                                                <dl class="attribute-product">
+                        <dt class="attribute-label">
+                            Korkeus                        </dt>
+                        <dd class="attribute-value">
+                                                                                                                            92 cm                                                                                    </dd>
+                    </dl>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+    </div>
+            </div>
+    <div class="attributes-badge">
+
+        
+        
+        
+        
+    </div>
+</div>
+                    </div>
+                            
+                                    <div class="data item title"
+                         aria-labeledby="tab-label-amfile_files-title"
+                         data-role="collapsible" id="tab-label-amfile_files">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#amfile_files"
+                           id="tab-label-amfile_files-title">
+                            Liitteet                        </a>
+                    </div>
+                    <div class="data item content" id="amfile_files" data-role="content" style="display: none;">
+                        
+
+<div class="amasty-product-attachment-block">
+            <ul class="list-unstyled">
+                                            <li>
+                    <a class='file' href="https://www.veke.fi/amfile/file/download/file_id/292/product_id/54291/" target="_blank">
+                                                <span>Assembly_instructions_MARIPOSA.pdf                                                            (1.50 MB)
+                                                    </span>
+                    </a>
+                </li>
+                    </ul>
+</div>
+                    </div>
+                            
+                                    <div class="data item title"
+                         aria-labeledby="tab-label-reviews-title"
+                         data-role="collapsible" id="tab-label-reviews">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#reviews"
+                           id="tab-label-reviews-title">
+                            Arvostelut <span class="counter">2</span>                        </a>
+                    </div>
+                    <div class="data item content" id="reviews" data-role="content" style="display: none;">
+                        
+<div class="block review-add">
+    <div class="block-title"><strong>Kirjoita arvostelu</strong></div>
+    <div class="block-content">
+                    <form action="https://www.veke.fi/review/product/post/id/54291/" class="review-form" method="post" id="review-form" data-role="product-review-form" data-bind="scope: 'review-form'">
+                <input name="form_key" type="hidden" value="ABXGj8mWq2k23Gqn" />                                <fieldset class="fieldset review-fieldset" data-hasrequired="">
+                    <legend class="legend review-legend"><span>Arvostelet tuotteen:</span><strong>Cuero Pampa Mariposa lepakkotuoli nahka</strong></legend><br />
+                                            <span id="input-message-box"></span>
+                        <fieldset class="field required review-field-ratings">
+                            <legend class="label"><span>Arviosi<span></legend><br/>
+                            <div class="control">
+                                <div class="nested" id="product-review-table">
+                                                                            <div class="field choice review-field-rating">
+                                            <label class="label" id="Hintalaatusuhde_rating_label"><span>Hintalaatusuhde</span></label>
+                                            <div class="control review-control-vote">
+                                                                                                                                                    <input
+                                                        type="radio"
+                                                        name="ratings[4]"
+                                                        id="Hintalaatusuhde_1"
+                                                        value="16"
+                                                        class="radio"
+                                                        data-validate="{required:true, messages:{required:'Valitse arvosana.'}}"
+                                                        aria-labelledby="Hintalaatusuhde_rating_label Hintalaatusuhde_1_label" />
+                                                    <label
+                                                        class="rating-1"
+                                                        for="Hintalaatusuhde_1"
+                                                        title="1 star"
+                                                        id="Hintalaatusuhde_1_label">
+                                                        <span>1 star</span>
+                                                    </label>
+                                                                                                                                                        <input
+                                                        type="radio"
+                                                        name="ratings[4]"
+                                                        id="Hintalaatusuhde_2"
+                                                        value="17"
+                                                        class="radio"
+                                                        data-validate="{required:true, messages:{required:'Valitse arvosana.'}}"
+                                                        aria-labelledby="Hintalaatusuhde_rating_label Hintalaatusuhde_2_label" />
+                                                    <label
+                                                        class="rating-2"
+                                                        for="Hintalaatusuhde_2"
+                                                        title="2 stars"
+                                                        id="Hintalaatusuhde_2_label">
+                                                        <span>2 stars</span>
+                                                    </label>
+                                                                                                                                                        <input
+                                                        type="radio"
+                                                        name="ratings[4]"
+                                                        id="Hintalaatusuhde_3"
+                                                        value="18"
+                                                        class="radio"
+                                                        data-validate="{required:true, messages:{required:'Valitse arvosana.'}}"
+                                                        aria-labelledby="Hintalaatusuhde_rating_label Hintalaatusuhde_3_label" />
+                                                    <label
+                                                        class="rating-3"
+                                                        for="Hintalaatusuhde_3"
+                                                        title="3 stars"
+                                                        id="Hintalaatusuhde_3_label">
+                                                        <span>3 stars</span>
+                                                    </label>
+                                                                                                                                                        <input
+                                                        type="radio"
+                                                        name="ratings[4]"
+                                                        id="Hintalaatusuhde_4"
+                                                        value="19"
+                                                        class="radio"
+                                                        data-validate="{required:true, messages:{required:'Valitse arvosana.'}}"
+                                                        aria-labelledby="Hintalaatusuhde_rating_label Hintalaatusuhde_4_label" />
+                                                    <label
+                                                        class="rating-4"
+                                                        for="Hintalaatusuhde_4"
+                                                        title="4 stars"
+                                                        id="Hintalaatusuhde_4_label">
+                                                        <span>4 stars</span>
+                                                    </label>
+                                                                                                                                                        <input
+                                                        type="radio"
+                                                        name="ratings[4]"
+                                                        id="Hintalaatusuhde_5"
+                                                        value="20"
+                                                        class="radio"
+                                                        data-validate="{required:true, messages:{required:'Valitse arvosana.'}}"
+                                                        aria-labelledby="Hintalaatusuhde_rating_label Hintalaatusuhde_5_label" />
+                                                    <label
+                                                        class="rating-5"
+                                                        for="Hintalaatusuhde_5"
+                                                        title="5 stars"
+                                                        id="Hintalaatusuhde_5_label">
+                                                        <span>5 stars</span>
+                                                    </label>
+                                                                                                                                                </div>
+                                        </div>
+                                                                    </div>
+                                <input type="hidden" name="validate_rating" class="validate-rating" value="" />
+                            </div>
+                        </fieldset>
+                                        <div class="field review-field-nickname required">
+                        <label for="nickname_field" class="label"><span>Nimimerkki</span></label>
+                        <div class="control">
+                            <input type="text" name="nickname" id="nickname_field" class="input-text" data-validate="{required:true}" data-bind="value: nickname()" />
+                        </div>
+                    </div>
+                    <div class="field review-field-summary required">
+                        <label for="summary_field" class="label"><span>Yhteenveto</span></label>
+                        <div class="control">
+                            <input type="text" name="title" id="summary_field" class="input-text" data-validate="{required:true}" data-bind="value: review().title" />
+                        </div>
+                    </div>
+                    <div class="field review-field-text required">
+                        <label for="review_field" class="label"><span>Arvostelu</span></label>
+                        <div class="control">
+                            <textarea name="detail" id="review_field" cols="5" rows="3" data-validate="{required:true}" data-bind="value: review().detail"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="actions-toolbar review-form-actions">
+                    <div class="primary actions-primary">
+                        <button type="submit" class="action submit primary"><span>Lähetä arvostelu</span></button>
+                    </div>
+                </div>
+            </form>
+            <script type="text/x-magento-init">
+{
+    "[data-role=product-review-form]": {
+        "Magento_Ui/js/core/app": {"components":{"review-form":{"component":"Magento_Review\/js\/view\/review"}}}    },
+    "#review-form": {
+        "Magento_Review/js/error-placement": {}
+    }
+}
+</script>
+            </div>
+</div>
+<div id="product-review-container" data-role="product-review"></div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Review/js/process-reviews": {
+                "productReviewUrl": "https://www.veke.fi/review/product/listAjax/id/54291/"
+            }
+        }
+    }
+</script>
+                    </div>
+                            
+                                    <div class="data item title"
+                         aria-labeledby="tab-label-payoptions-title"
+                         data-role="collapsible" id="tab-label-payoptions">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#payoptions"
+                           id="tab-label-payoptions-title">
+                            Maksutavat                        </a>
+                    </div>
+                    <div class="data item content" id="payoptions" data-role="content" style="display: none;">
+                        <div class="verkkokauppa-maksutavat">
+    <h3><strong><span style="font-size: large;">SVEA Er&auml;maksu</span></strong></h3>
+<p>SVEA er&auml;maksulla jaat ostoksesi k&auml;tev&auml;sti pieniin kuukausieriin. Valitse maksaessasi sinulle sopivin er&auml;maksun pituus useista vaihtoehdoista.&nbsp;Tarkemmat er&auml;maksuun liittyv&auml;t tiedot l&ouml;ytyv&auml;t&nbsp;<a href="https://www.veke.fi/asiakaspalvelu/verkkokaupan-ehdot">t&auml;&auml;lt&auml;</a>.</p>
+<p><span style="color: #000000;"><strong><a href="https://palvelut.svea.com/maksumobile/credit?veke/0" target="_blank"><span style="color: #000000;">Klikkaa ja hae luottop&auml;&auml;t&ouml;s!</span></a></strong></span></p>
+<table>
+<thead>
+<tr><th class="vcms-center">Kampanja</th><th class="vcms-center">Korko %</th><th class="vcms-center">Laskutuslis&auml; / kk</th><th class="vcms-center">Perustamismaksu</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="vcms-center">3 kk er&auml;maksu</td>
+<td class="vcms-center">0 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">9,90 &euro;</td>
+</tr>
+<tr>
+<td class="vcms-center">10 kk er&auml;maksu</td>
+<td class="vcms-center">0 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">9,90 &euro;</td>
+</tr>
+<tr>
+<td class="vcms-center">20 kk er&auml;maksu</td>
+<td class="vcms-center">9,8 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">9,90 &euro;</td>
+</tr>
+<tr>
+<td class="vcms-center">30 kk er&auml;maksu</td>
+<td class="vcms-center">9,8 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">9,90 &euro;</td>
+</tr>
+<tr>
+<td class="vcms-center">40 kk er&auml;maksu</td>
+<td class="vcms-center">9,8 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">39,90 &euro;</td>
+</tr>
+<tr>
+<td class="vcms-center">50 kk er&auml;maksu</td>
+<td class="vcms-center">9,8 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">39,90 &euro;</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td class="vcms-center">60 kk er&auml;maksu</td>
+<td class="vcms-center">9,8 %</td>
+<td class="vcms-center">6,5 &euro; / kk</td>
+<td class="vcms-center">39,90 &euro;<br /><br /></td>
+</tr>
+</tfoot>
+</table>
+<p><strong><br /></strong></p>
+<h3><strong><span style="font-size: large;">SVEA Lasku</span></strong></h3>
+<p>Svea laskulla saat ostoksellesi noin 30 p&auml;iv&auml;&auml; maksuaikaa siit&auml; kun tilauksesi on toimitettu. Tarjoamme sinulle yhteisty&ouml;ss&auml; Svean kanssa laskun ilman ylim&auml;&auml;r&auml;isi&auml; kuluja. Laskutuslis&auml; on 0 &euro;.&nbsp;</p>
+<p><span style="color: #000000;"><strong><a href="https://palvelut.svea.com/maksumobile/credit?veke/0" target="_blank"><span style="color: #000000;">Klikkaa ja hae luottop&auml;&auml;t&ouml;s!</span></a></strong></span></p>
+<p>Svea lasku l&auml;hetet&auml;&auml;n asiakkaan s&auml;hk&ouml;postiin. Laskun voi halutessaan muuttaa my&ouml;s tililuotoksi maksamalla siit&auml; minimiss&auml;&auml;n laskun ehdottama summa. Lasku on mahdollista muuttaa luotoksi maksamalla laskulla mainittu minimier&auml;. Ensimm&auml;isen laskun takaa l&ouml;yd&auml;t luoton tarkemmat luottoehdot. Voit tehd&auml; lis&auml;ostoksia aina, kun Sinulla on luottorajaa j&auml;ljell&auml; ja maksaa ostokset osissa luottosopimuksen ehtojen mukaisesti. Tarkemmat laskuun liittyv&auml;t tiedot l&ouml;ytyv&auml;t <a href="https://www.veke.fi/asiakaspalvelu/verkkokaupan-ehdot">t&auml;&auml;lt&auml;</a>.</p>
+<p></p>
+<h3><span style="font-size: large;"><strong>MobilePay</strong></span></h3>
+<p>Voit maksaa ostoksesi todella helposti ja turvallisesti Suomen suosituimmalla mobiilimaksusovellus MobilePaylla.&nbsp;</p>
+<p></p>
+<h3><strong><span style="font-size: large;">Verkkopankit</span></strong></h3>
+<p>Voit maksaa ostoksesi turvallisesti kaikkien yleisimpien pankkien verkkopankkitunnuksilla.&nbsp;</p>
+<p></p>
+<h3><strong><span style="font-size: large;">Luottokortti</span></strong></h3>
+<p>Voit maksaa ostoksesi turvallisesti kaikilla yleisimmill&auml; luottokorteilla.&nbsp;</p></div>                    </div>
+                            
+                                    <div class="data item title"
+                         aria-labeledby="tab-label-product_info_shipping-title"
+                         data-role="collapsible" id="tab-label-product_info_shipping">
+                        <a class="data switch"
+                           tabindex="-1"
+                           data-toggle="switch"
+                           href="#product_info_shipping"
+                           id="tab-label-product_info_shipping-title">
+                            Toimitus                        </a>
+                    </div>
+                    <div class="data item content" id="product_info_shipping" data-role="content" style="display: none;">
+                        <div class="shipment-detailed-info">
+    <h2>TOIMITUSTAVAT</h2>
+<h4><span>Nouto Postista - Postipaketti</span></h4>
+<div><span>Asiakas noutaa tilauksen l&auml;himm&auml;st&auml; Postista tai muusta Postin m&auml;&auml;ritt&auml;m&auml;st&auml; toimipisteest&auml;. Asiakas saa postilta ilmoituksen, kun l&auml;hetys on noudettavissa.&nbsp;</span>Posti s&auml;ilytt&auml;&auml; l&auml;hetyst&auml; 7 vrk:tta, jonka j&auml;lkeen l&auml;hetys palautuu takaisin l&auml;hett&auml;j&auml;lle.</div>
+<div></div>
+<div></div>
+<div>
+<h4>Posti kotipaketti, toimitus asuntoon sis&auml;lle</h4>
+<div>Posti toimittaa tilauksen asiakkaalle kotiin saakka. Posti on yhteydess&auml; asiakkaaseen toimitusajan sopimiseksi. Kuljetukset tapahtuvat suurimmissa kaupungeissa arkisin klo 8-21, muilla alueilla jakelu klo 14 menness&auml;.</div>
+<div></div>
+<div></div>
+<h4><span>Posti rahti, kuljetus pihalle (ulko-ovelle)</span></h4>
+<div><span><span>Tilaus toimitetaan ensimm&auml;iselle ulko-ovelle</span><span>&nbsp;tai sen l&auml;heisyyteen. Esim. kerrostalossa tilaus tuodaan alaovelle.</span>&nbsp;<span class="il">Toimitusaika</span>&nbsp;ilmoitetaan puhelimitse tai tekstiviestill&auml;.&nbsp;</span>Kuljetukset tapahtuvat arkisin maanantaista perjantaihin p&auml;&auml;s&auml;&auml;nt&ouml;isesti klo 8-16&nbsp;&nbsp;v&auml;lill&auml;, paikkakuntakohtaisia eroja on.</div>
+<div></div>
+<h4><span style="font-size: 1em;">Posti rahti, kuljetus asuntoon sis&auml;lle</span></h4>
+<div><span><span><span class="il">Toimitusaika</span>&nbsp;ilmoitetaan puhelimitse tai tekstiviestill&auml;. Kuljetukset tapahtuvat arkisin maanantaista perjantaihin p&auml;&auml;s&auml;&auml;nt&ouml;isesti klo 8-16&nbsp;</span><span>v&auml;lill&auml;, paikkakuntakohtaisia ero on.</span>&nbsp;</span>Tilaus toimitetaan asiakkaalle sis&auml;lle saakka.</div>
+</div></div>                    </div>
+                    </div>
+    </div>
+<div class="magestore-bannerslider">
+    </div>
+<input name="form_key" type="hidden" value="ABXGj8mWq2k23Gqn" /><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+    <script>
+        window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/www.veke.fi\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/www.veke.fi\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/www.veke.fi\/"};
+    </script>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fwww.veke.fi\u002Fstatic\u002Fversion1544017259\u002Ffrontend\u002FVaimo\u002Fveke\u002Ffi_FI\u002Fimages\u002Floader\u002D1.gif"
+            }
+        }
+    </script>
+</div>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/section-config":{"sections":{"stores\/store\/switch":"*","directory\/currency\/switch":"*","*":["messages","personal-data"],"customer\/account\/logout":"*","customer\/account\/loginpost":"*","customer\/account\/createpost":"*","customer\/ajax\/login":["checkout-data","cart"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","google-tag-manager-product-info"],"checkout\/cart\/delete":["cart","google-tag-manager-product-info"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","checkout-data","last-ordered-items"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart","checkout-data"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data"],"multishipping\/checkout\/overviewpost":["cart"],"authorizenet\/directpost_payment\/place":["cart","checkout-data"],"review\/product\/post":["review"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"amgiftcard\/cart\/apply":["cart"],"amgiftcard\/cart\/remove":["cart"],"braintree\/paypal\/placeorder":["cart","checkout-data"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"weltpixel_quickview\/index\/updatecart":["cart"]},"clientSideSections":["checkout-data","cart-data"],"baseUrls":["https:\/\/www.veke.fi\/"]}}}</script>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/customer-data":{"sectionLoadUrl":"https:\/\/www.veke.fi\/customer\/section\/load\/","cookieLifeTime":"86400","updateSessionUrl":"https:\/\/www.veke.fi\/customer\/account\/updateSession\/"}}}</script>
+<script type="text/x-magento-init">
+{"*":{"Magento_Customer\/js\/invalidation-processor":{"invalidationRules":{"website-rule":{"Magento_Customer\/js\/invalidation-rules\/website-rule":{"scopeConfig":{"websiteId":1}}}}}}}</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.veke.fi\/page_cache\/block\/render\/id\/54291\/","handles":["default","catalog_product_view","catalog_product_view_from_category_2326","catalog_product_view_from_category_2955","catalog_product_view_from_category_3044","catalog_product_view_from_category_3043","catalog_product_view_from_category_3109","catalog_product_view_from_category_3112","catalog_product_view_from_category_3169","catalog_product_view_from_category_3015","catalog_product_view_from_category_2889","catalog_product_view_id_54291","catalog_product_view_sku_conf-CDPAMPA-WEB","catalog_product_view_type_configurable","vaimo_javascript_mixin_flags_context","ajaxblocks_product_page","ajaxblocks_loader","vmenu_210","vmenu_setup","vcms_scaffolding_bootstrap"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/cuero-design-pampa-mariposa-lepakkotuoli"},"versionCookieName":"private_content_version"}        }
+    }
+</script>
+<div class="magestore-bannerslider">
+    </div>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "requireCookie": {"noCookieUrl":"https:\/\/www.veke.fi\/cookie\/index\/noCookies\/","triggers":{"addToWishlistLink":".action.towishlist"}}        }
+    }
+</script>
+<script type="text/x-magento-init">
+    {
+        "body": {
+            "awArpAjax": {"url":"https:\/\/www.veke.fi\/autorelated\/block\/render\/id\/54291\/","handles":["default","catalog_product_view","catalog_product_view_from_category_2326","catalog_product_view_from_category_2955","catalog_product_view_from_category_3044","catalog_product_view_from_category_3043","catalog_product_view_from_category_3109","catalog_product_view_from_category_3112","catalog_product_view_from_category_3169","catalog_product_view_from_category_3015","catalog_product_view_from_category_2889","catalog_product_view_id_54291","catalog_product_view_sku_conf-CDPAMPA-WEB","catalog_product_view_type_configurable","vaimo_javascript_mixin_flags_context","ajaxblocks_product_page","ajaxblocks_loader","vmenu_210","vmenu_setup","vcms_scaffolding_bootstrap"],"originalRequest":{"route":"catalog","controller":"product","action":"view","uri":"\/cuero-design-pampa-mariposa-lepakkotuoli"}}        }
+    }
+</script>
+        <div data-aw-arp-block-name="awarp_related_before_product"></div>
+
+        <div data-aw-arp-block-name="awarp_related_inside_product"></div>
+
+
+
+<!-- Start Photoslurp Embed Code -->
+    <div style="text-align: center; text-transform: uppercase;"><h2 style="margin-top: 60px !important;">#vekefi</h2></div>
+
+<div id="veke-carousel-product" class="ps-container">
+        <script data-type="photoslurp">
+          if(!photoSlurpWidgetSettings) {
+            var photoSlurpWidgetSettings = {};
+          }
+
+          (function() {
+       photoSlurpWidgetSettings['veke-carousel-product'] = {
+              widgetId: 'product',
+              widgetType: 'carousel',
+              albumId: 1258,
+              theme: 'modern',
+              productId: 'Cuero Pampa Mariposa lepakkotuoli nahka',
+              lang: 'en', 
+              pageLimit: 8,
+              thumbOverlay: true,
+              shopThisLookText: 'Shop it now',
+              ctaButton: 'Buy',
+              visibleProducts: 2,  
+              debug: true
+            };
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '//static.photoslurp.com/widget/v3/widget_loader.js';
+        var entry = document.getElementsByTagName('script')[0];
+        entry.parentNode.insertBefore(script, entry);
+})();
+        </script>
+
+         
+        </div>
+      </div>
+<!-- End Photoslurp Embed Code -->
+    <!-- Custobar upsell -->
+    
+<img src="assets/img/footer-gal.jpg" alt="" style="margin-bottom: 80px;">
+
+    </main><footer class="page-footer"><div class="footer content"><ul class="footer links">
+<div class="row-centered" data-mage-init='{"footer":{}}'>
     <div class="col-md-2 col-sm-3 col-xs-12 col-centered footer-links about">
         <div class="mobile-padding">
             <span class="title"><a href="https://www.veke.fi/asiakaspalvelu/yhteystiedot" target="_self">Asiakaspalvelu</a></span>
@@ -3686,7 +4952,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <li>
                     <p class="veke-verko">
     Veke | Verkkokauppa
-</p>                    <p>p. 09 425 50420</p>                    <p>Ma-pe: 9-18</p>                </li>
+</p>                    <p>p. 09 425 50420</p>                    <p>Ma-pe: 9-18</p>
+<p>Itsen&auml;isyysp&auml;iv&auml;n&auml; 6.12. suljettu</p>                </li>
             </ul>
         </div>
     </div>
@@ -3696,7 +4963,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <ul>
                 <li>
                     <span class="icon con-an-building"></span>
-                    <p><a href="https://www.veke.fi/myymalat/oulu/">Oulu</a> <br><a href="https://www.veke.fi/myymalat/rovaniemi/">Rovaniemi</a> <br><a href="https://www.veke.fi/myymalat/ranua/">Ranua</a></p>                </li>
+                    <p><a href="https://www.veke.fi/myymalat/oulu/">Oulu</a> <br /><a href="https://www.veke.fi/myymalat/rovaniemi/">Rovaniemi</a> <br /><a href="https://www.veke.fi/myymalat/ranua/">Ranua</a></p>                </li>
             </ul>
         </div>
     </div>
@@ -3720,10 +4987,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <ul>
                 <li>
                     <p>
-    <a _self="" href="https://www.veke.fi/yrityksestamme/veken-tarina/" target="">Veken tarina</a>
+    <a _self href="https://www.veke.fi/yrityksestamme/veken-tarina/" target>Veken tarina</a>
 </p>
 <p>
-    <a _self="" href="https://www.veke.fi/yrityksestamme/arvot-lupaus/" target="">Arvot &amp; Lupaus&nbsp;</a>
+    <a _self href="https://www.veke.fi/yrityksestamme/arvot-lupaus/" target>Arvot &amp; Lupaus </a>
 </p>
 <p>
     <a href="https://www.veke.fi/yrityksestamme/henkilosto/">Meistä</a>
@@ -3743,13 +5010,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <a href="//fi.pinterest.com/vekefi" target="_blank" class="icon icon-pinterest"></a>
     <a href="//www.youtube.com/channel/UCTQ43TkrZNdgw87N-zp1-Rw/videos" target="_blank" class="icon icon-youtube"></a>
 </div>
-</ul></div>                </div>
-                    </div>
-        </div>
-</div></footer>
-
-
-<span data-bind="scope: 'personalData'" style="display:none;">
+</ul></div></footer><span data-bind="scope: 'personalData'" style="display:none;">
     <!-- ko if: personalData().klevuSessionId -->
     <span id="klevu_sessionId" data-bind="text: personalData().klevuSessionId"></span>
     <!-- /ko -->
@@ -3771,14 +5032,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 window.criteo_q.push({"event": "setSiteType", "type": deviceType, "ecpplugin": "magento2-1.1.4"});
                 window.criteo_q.push( {"event":"setAccount","account":"47594"},
 {"event":"setEmail","email":""},
-{"event":"viewHome"} );
+{"event":"viewItem","item":"conf-CDPAMPA-WEB"} );
 
             </script>
             <!-- END OF CRITEO ONETAG -->            <script type="text/javascript">
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
-                    "event": "crto_homepage",
-                    "crto": {"email":""}
+                    "event": "crto_productpage",
+                    "crto": {"email":"","products":"conf-CDPAMPA-WEB"}
                 });
             </script><!-- fb tracking pixel -->
 <script>(function() {
@@ -3801,7 +5062,8 @@ window._fbq.push(['track', 'PixelInitialized', {}]);
 <!-- End of veke Zendesk Widget script -->
     <script>
         (function(c,u,s,t,o,b,a,r) {var e;c[o]=[];c[b] = a;e = u.createElement(s);r=u.getElementsByTagName(s)[0];e.async=1;e.src = t;r.parentNode.insertBefore(e, r);})(window, document, 'script', 'https://www.custobar.com/js/v1/custobar.js', 'cstbr', 'cstbrConfig', {'_companyToken':'Yk0Zz0wQfTnnlo'});
-                    </script>
+                        cstbrConfig.productId = "conf-CDPAMPA-WEB";
+            </script>
 <script type="text/javascript">
 // add in cms template
 var klevu_current_version = '2.1.34';
@@ -3867,7 +5129,85 @@ var allInputs = document.getElementsByTagName( 'input' );
     });
 
     window.weltpixel_quickview = {"baseUrl":"https:\/\/www.veke.fi\/","closeSeconds":"0","showMiniCart":"1","showShoppingCheckoutButtons":"1"};
+</script><script type="text/javascript">
+require(['jquery'], function(){
+        var referrer, search_term, klevu_search_product_tracking;
+        referrer = document.referrer;
+        var getQueryString = function ( field, url ) {
+            var href = url ? url : window.location.href;
+            var reg = new RegExp( '[?&]' + field + '=([^&#]*)', 'i' );
+            var string = reg.exec(href);
+                return string ? string[1] : null;
+        };
+        search_term = getQueryString('q',referrer);
+        if (referrer.indexOf('catalogsearch/result') > -1 && search_term) {
+            klevu_search_product_tracking = {"klevu_apiKey":"klevu-15057255780752047","klevu_term":"","klevu_type":"clicked","klevu_productId":"54291","klevu_productName":"Cuero Pampa Mariposa lepakkotuoli nahka","klevu_productUrl":"https:\/\/www.veke.fi\/cuero-design-pampa-mariposa-lepakkotuoli","Klevu_typeOfRecord":"KLEVU_PRODUCT"};
+            klevu_search_product_tracking.klevu_term = search_term;
+            var param = jQuery.param(klevu_search_product_tracking);
+            jQuery.ajax({
+                url:'//stats.klevu.com/analytics/productTracking',
+                type: 'GET',
+                data: param,
+                dataType: 'json',
+                statusCode: {
+                    200: function(data) {
+                    }
+                },
+                crossDomain: true
+            });
+        }
+});
 </script>
+<div class="magestore-bannerslider">
+    </div>
+<div class="magestore-bannerslider">
+    </div>
+
+<div id="modal-form" style="display: none;">
+    <div class="modal-content-productquestion">
+        <h5>Kysy tästä tuotteesta</h5>
+        <form id="form-productquestion">
+            <div class="info-productquestion">Täytä yhteystiedot ja viestikenttä.</div>
+
+            <label class="label" for="contact-name"><span>Nimi:</span><span class="required"> *</span></label>
+
+            <input id="contactform-name" type="text" name="contact-name" class="required-entry" value="" />
+
+            <label class="label" for="email"><span>Sähköposti:</span><span class="required"> *</span></label>
+            <input name="email" id="contactform-email" type="text" title="Sähköposti" value="" class="validate-email required-entry"  />
+
+            <label class="label" for="telephone"><span>Puhelinnumero:</label><span class="required"> *</span></label>
+            <input name="telephone" id="contactform-phone" type="text" title="Puhelinnumero" value="" class="validate-phoneLax required-entry"/>
+
+            <label class="label" for="comment"><span>Viesti:</span><span class="required"> *</span></label>
+            <textarea name="comment" id="contactform-message" title="Viesti:" class="required-entry" cols="5" rows="3"></textarea>
+
+            <input type="hidden" id="contactform-product-name" value="Cuero Pampa Mariposa lepakkotuoli nahka" />
+            <input type="hidden" id="contactform-product-id" value="54291" />
+            <input type="hidden" id="contactform-product-sku" value="conf-CDPAMPA-WEB" />
+        </form>
+    </div>
+</div>
+
+<div id="modal-response" style="display: none;">
+    <div class="modal-content-productquestion">
+        <div class="response-productquestion">Kiitos viestistäsi, vastaamme sinulle mahdollisimman pian.</div>
+    </div>
+</div>
+
+<div id="modal-error" style="display: none;">
+    <div class="modal-content-productquestion">
+        <div class="response-productquestion">Your message could not be send. Try again later.</div>
+    </div>
+</div>
+
+
+
+
+<script type="vajax_start/area_6"></script>
+<div class="quickview-container">
+    <div class="quickview-content"></div>
+</div><script type="vajax_end/area_6"></script>
 
 <div class="block scroll-top" data-mage-init='{"scrollTop":{}}'>
     <span>Ylös</span>
@@ -3875,5 +5215,5 @@ var allInputs = document.getElementsByTagName( 'input' );
 
 
 </div><div id="overlay">&nbsp;</div>
-<div class="shipping-rates-overlay"></div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ee3f37d5a3","applicationID":"91272041","transactionName":"b1dSMkBZWkFZBkFbVlYdcQVGUVtcFwZYQRZRXFQDShddXFwATQ==","queueTime":0,"applicationTime":1721,"atts":"QxBRRAhDSU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<div class="shipping-rates-overlay"></div>    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ee3f37d5a3","applicationID":"91272041","transactionName":"b1dSMkBZWkFZBkFbVlYdcQVGUVtcFwZURlhUXVdJQkpbVk0GQR1PUVdH","queueTime":0,"applicationTime":5381,"atts":"QxBRRAhDSU8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
